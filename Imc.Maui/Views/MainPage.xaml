@@ -16,12 +16,12 @@
                     Text="proporcione el peso en kilogramos"/>
                 <Entry
                     BackgroundColor="Gray"
-                    x:Name="PesoEntry"/>
+                    Text="{Binding Path=Peso}"/>
                 <Label 
                     Text="proporciona la estatura de la persona en metros"/>
                 <Entry
                     BackgroundColor="Gray"
-                    x:Name="EstaturaEntry"/>
+                    Text="{Binding Path=Estatura}"/>
 
             </VerticalStackLayout>
         </Border>
@@ -31,10 +31,10 @@
             <Button
                Text="Calcular"
                BackgroundColor="Green"
-               Clicked="OnCalcularButtonClicked"/>
+                Command="{Binding Path=CalcularCommand}"/>
             <Button 
-                Text="Reiniciar"
-               Clicked="OnLimpiarButtonClicked"/>
+                Text="Limpiar"
+                Command="{Binding Path=LimpiarCommand}"/>
 
         </HorizontalStackLayout>
         <Border>
@@ -44,19 +44,17 @@
                 <Label
                     Text="El indice de masa corporal de la persona es"/>
                 <Label
-                    Text="23.4567"
+                    Text="{Binding Path=Imc}"
                     HorizontalOptions="Center"
                     FontSize="Medium"
-                    FontAttributes="Bold"
-                    x:Name="ImcLabel"/>
+                    FontAttributes="Bold"/>
                 <Label
                     Text="El estado nutricional de la persona es"/>
                 <Label
-                    Text="Peso normal"
+                    Text="{Binding Path=EstadoNutricional}"
                     HorizontalOptions="Center"
                     FontSize="Medium"
-                    FontAttributes="Bold"
-                    x:Name="EstadoNutricionalLabel"/>
+                    FontAttributes="Bold"/>
             </VerticalStackLayout>
 
         </Border>
